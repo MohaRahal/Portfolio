@@ -4,18 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Mohamed Rahal - Portfolio</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      #vanta-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      
+   
+      body {
+        background-color: transparent;
+        color: #ffffff;
+      }
+      
+      .title, .section__text__p1, .section__text__p2,
+      .experience-sub-title, .project-title,
+      footer p, .nav-links a {
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      }
+      
+      .details-container, .color-container {
+        color: #ffffff;
+      }
+      
+      .color-container h2, .color-container p {
+        color: #333;
+        text-shadow: none;
+      }
+    </style>
   </head>
   <body>
+    <div id="vanta-bg"></div>
+
     <nav id="desktop-nav">
       <div class="logo">Mohamed Rahal</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <!-- <li><a href="#projects">Projects</a></li> -->
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -31,24 +70,19 @@
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
+
+    <!-- Profile Section -->
     <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/foto2.jpg" alt="Mohamed Rahal profile picture" />
-      </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Mohamed Rahal</h1>
         <p class="section__text__p2">Back End Developer</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/CVMohamed-Omar-Rahal.pdf')"
-          >
+          <button class="btn btn-color-2" onclick="window.open('./assets/CVMohamed-Omar-Rahal.pdf')">
             Download CV
           </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
@@ -56,21 +90,15 @@
           </button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/mohamed-rahal-181577274/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/MohaRahal'"
-          />
+          <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="My LinkedIn profile" class="icon-first" 
+               onclick="location.href='https://www.linkedin.com/in/mohamed-rahal-181577274/'" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="My Github profile" class="icon-first" 
+               onclick="location.href='https://github.com/MohaRahal'" />
         </div>
       </div>
     </section>
+
+    <!-- About Section -->
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -78,37 +106,29 @@
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Studying Bachelor's Degree in Computer Science</p>
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+              <h3>Educação</h3>
+              <p>Estudando bacharelado em Ciência da Computação</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+              <h3>Educação</h3>
+              <p>Estudando Tecnólogo em Análise de Desenvolvimento de Sistemas</p>
             </div>
           </div>
-          <div class="text-container">
+          <div class="details-container">
             <p>
-                      Sou Mohamed Rahal, desenvolvedor web e de software apaixonado
-                      por tecnologia e inovação. Com experiência em
-                      programação, design de interfaces e arquitetura de sistemas, estou
-                      sempre explorando novas linguagens e técnicas para
-                      aprimorar minhas habilidades. Focado em criar soluções eficientes e
-                      inovadoras, gosto de enfrentar desafios e participar
-                      ativamente de comunidades de desenvolvedores, onde posso
-                      compartilhar conhecimento e colaborar em projetos com
-                      impacto positivo
+              Como estudante de Ciência da Computação e Análise de Desenvolvimento de Sistemas , tenho me dedicado a explorar tecnologias de ponta, com foco em desenvolvimento back-end e arquitetura de sistemas.
+               No meu percurso acadêmico, busco constantemente aprimorar minhas habilidades técnicas e colaborar em projetos que promovam soluções eficientes e inovadoras.  
+              Atualmente, participo ativamente de comunidades de desenvolvedores, contribuindo para iniciativas colaborativas e compartilhando conhecimentos. 
+              Minha motivação está em enfrentar desafios tecnológicos e criar impacto positivo por meio de projetos que aliam inovação e eficiência.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
+
+    <!-- Experience Section -->
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
@@ -118,36 +138,27 @@
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
+                     alt="HTML icon" class="icon-first" />
                 <div>
                   <h3>HTML</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
+                     alt="CSS icon" class="icon-first" />
                 <div>
                   <h3>CSS</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+                     alt="JavaScript icon" class="icon-first" />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Basic</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
             </div>
@@ -156,181 +167,160 @@
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                  <h3>MySql</h3>
-                  <p>Intermediate</p>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" 
+                     alt="MySQL icon" class="icon-first" />
+                <div>
+                <h3>MySql</h3>
+                <p>Intermediate</p>
+                </div>
               </article>
               <article>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" 
+                     alt="SQLite icon" class="icon-first" />
                 <div>
                   <h3>Sqlite</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" 
+                     alt="Python icon" class="icon-first" />
                 <div>
                   <h3>Python</h3>
-                  <p>Basic</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" 
+                     alt="C# icon" class="icon-first" />
                 <div>
                   <h3>C#</h3>
-                  <p>Intermediate</p>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blazor/blazor-original.svg" 
+               alt="blazor icon" class="icon-first" />
+                <div>
+                  <h3>Blazor</h3>
+                  <p>Advanced</p>
                 </div>
               </article>
             </div>
           </div>
         </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Produtividade & Sistemas</h2>
+          <div class="article-container">
+            <article>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" 
+                   alt="Linux" class="icon-first" />
+              <div>
+                <h3>Linux</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" 
+                   alt="Windows" class="icon-first" />
+              <div>
+                <h3>Windows</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
+
+    <!-- Projects Section 
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/coffe.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Coffe Shop</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MohaRahal/Coffe-Shop'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/login.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
             <h2 class="experience-sub-title project-title">Login Landing Page</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MohaRahal/Login-Landing-Page'"
-              >
+              <button class="btn btn-color-1" 
+                      onclick="location.href='https://github.com/MohaRahal/Login-Landing-Page'">
                 Github
               </button>
             </div>
           </div>
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/dice-game-random-good-luck.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
             <h2 class="experience-sub-title project-title">Dice Game</h2>
+            <div class="text text-container">
+              <p>
+                A simple dice game where two players roll dice and the player with the higher roll wins.
+                The game is implemented using C#.
+              </p>
+            </div>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MohaRahal/Dice-game'"
-              >
+              <button class="btn btn-color-1" 
+                      onclick="location.href='https://github.com/MohaRahal/Dice-game'">
                 Github
-              </button>
               </button>
             </div>
           </div>
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/8c9bfbca-6591-45e0-90f1-4b976a631c5c.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
             <h2 class="experience-sub-title project-title">QuickOrder</h2>
+            <div class="text text-container">
+              <p>
+                QuickOrder é um aplicativo de gerenciamento de pedidos desenvolvido para pequenos comércios, 
+                oferecendo uma maneira prática de criar, gerenciar e visualizar pedidos.
+              </p>
+            </div>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MohaRahal/QuickOrder'"
-              >
+              <button class="btn btn-color-1" 
+                      onclick="location.href='https://github.com/MohaRahal/QuickOrder'">
                 Github
               </button>
+              <button class="btn btn-color-1"
+                      onclick="location.href='https://drive.google.com/file/d/1zf678B5TQwP1LyH5WbDLcpUNgXvXCZGE/view?usp=drive_link'">
+                Download
               </button>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" 
+           onclick="location.href='./#contact'" />
     </section>
+    -->
+
+    <!-- Contact Section -->
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="email@gmail.com">moharahal30@gmail.com</a></p>
+          <img src="./assets/email.png" alt="Email icon" class="icon" />
+          <p><a href="mailto:moharahal30@gmail.com">moharahal30@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn icon" class="icon-first" />
           <p><a href="https://www.linkedin.com/in/mohamed-rahal-181577274/">LinkedIn</a></p>
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <!-- <li><a href="#projects">Projects</a></li> -->
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Mohamed Rahal. All Rights Reserved.</p>
+      <p>Copyright &#169; 2025 Mohamed Rahal. All Rights Reserved.</p>
     </footer>
+
+    <!-- Scripts -->  
     <script src="script.js"></script>
   </body>
 </html>
