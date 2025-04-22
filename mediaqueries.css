@@ -13,91 +13,107 @@
 }
 
 @media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
+  body {
+    padding: 0 20px; 
   }
-  #hamburger-nav {
+  section, .section-container {
+    padding: 20px 5%;
+    max-width: 100%; 
+  }
+}
+@media screen and (max-width: 790px) {
+  .menu-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
+  
+  .menu-links.open {
+    transform: translateX(0);
   }
-  #profile,
-  .section-container {
-    display: block;
+  
+  .menu-links li a {
+    font-size: 1.5rem;
+    color: white;
   }
-  .arrow {
-    display: none;
+  
+
+  .text-container,
+  .details-container {
+    text-align: center;
+    padding: 1.5rem;
   }
-  section,
-  .section-container {
-    height: fit-content;
+  
+  .section__text {
+    padding: 0 10%;
   }
-  section {
-    margin: 0 5%;
+  
+
+  #profile {
+    height: auto;
+    padding: 5rem 0;
   }
+  
   .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+    width: 200px;
+    height: 200px;
   }
-  .about-containers {
-    margin-top: 0;
+  
+  .btn-container {
+    justify-content: center;
+  }
+  
+  footer {
+    padding: 2rem 0;
   }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+@media screen and (max-width: 480px) {
+  section {
+    padding: 3rem 5%;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
+  
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-  .text-container {
-    text-align: justify;
+  
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+  
+  .nav-links {
+    gap: 0.3rem;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+
+  .hamburger-icon {
+    z-index: 1000;
+  }
+  
+  .hamburger-icon.open span {
+    background-color: white;
+  }
+  
+
+  .text-container p,
+  .details-container p {
+    max-width: 100%;
+    word-wrap: break-word;
   }
 }
